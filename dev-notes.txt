@@ -1,0 +1,7 @@
+
+create directory:  app/static
+
+download creative tim theme and copy to app/static
+
+
+        <div class="img-src" style="background-image: {{ url_for('static', filename='assets/img/cover_4.jpg', _external=True) }}"></div>

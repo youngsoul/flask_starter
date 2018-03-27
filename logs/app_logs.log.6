@@ -1,0 +1,106 @@
+2018-03-25 20:10:15,221 ERROR: Exception on /http://fonts.googleapis.com/css?family=Grand+Hotel [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 928, in send_static_file
+    cache_timeout=cache_timeout)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 674, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1512, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1471, in handle_http_exception
+    return handler(e)
+  File "/Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py", line 8, in not_found_error
+    return render_template('errors/404.html'), 404
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/patryan/Development/mygithub/flask-starter/app/templates/errors/404.html", line 8, in top-level template code
+    <p><a href="{{ url_for('main.index') }}">{{ _('Back') }}</a></p>
+jinja2.exceptions.UndefinedError: '_' is undefined
+2018-03-25 20:10:15,222 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:13]
+2018-03-25 20:10:17,249 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:10:17,249 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:10:17,323 ERROR: Exception on /foo/bar [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 928, in send_static_file
+    cache_timeout=cache_timeout)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 674, in send_from_directory
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1512, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1471, in handle_http_exception
+    return handler(e)
+  File "/Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py", line 8, in not_found_error
+    return render_template('errors/404.html'), 404
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/patryan/Development/mygithub/flask-starter/app/templates/errors/404.html", line 8, in top-level template code
+    <p><a href="{{ url_for('main.index') }}">{{ _('Back') }}</a></p>
+jinja2.exceptions.UndefinedError: '_' is undefined
+2018-03-25 20:10:17,323 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:13]
+2018-03-25 20:11:06,977 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
+2018-03-25 20:11:08,977 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:11:08,977 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:11:12,421 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:11:12,515 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:11:12,515 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:13:45,687 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
+2018-03-25 20:13:48,866 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:13:48,866 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:13:49,366 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:13:49,366 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:13:58,528 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:13:58,528 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:14:01,031 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:14:01,135 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:14:01,135 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:14:48,355 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
+2018-03-25 20:14:51,343 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:14:51,344 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:14:51,448 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:14:51,449 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:14:51,724 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]

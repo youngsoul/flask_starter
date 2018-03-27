@@ -1,0 +1,87 @@
+2018-03-25 20:56:00,987 ERROR: Exception on /page2/index [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1560]
+Traceback (most recent call last):
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/patryan/Development/mygithub/flask-starter/app/page2/routes.py", line 14, in index
+    return render_template('page2/index.html', server_message="Flask, Jinja and Creative Tim.. working together!")
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 133, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 57, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 85, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: page2/index.html
+2018-03-25 20:56:00,992 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:13]
+2018-03-25 20:56:01,058 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:01,058 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:25,225 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:25,320 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:25,321 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:25,416 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:25,417 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:25,502 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:25,503 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:25,580 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:25,581 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:34,315 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:34,366 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:34,366 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:34,430 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:34,430 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:34,517 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:34,518 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:34,629 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:34,630 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:36,035 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:36,035 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:36,093 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:36,151 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:36,151 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:36,219 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:36,278 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:36,278 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:36,347 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:36,347 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:48,465 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:56:48,523 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:56:48,523 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:42,966 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:57:42,967 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:43,019 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:43,725 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:43,781 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:57:43,782 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:43,844 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:57:43,845 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:43,901 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:57:43,901 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:43,959 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:57:43,959 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:44,309 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:57:44,309 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:44,366 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:44,442 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:57:44,443 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:44,508 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-03-25 20:57:44,509 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
+2018-03-25 20:57:44,582 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
