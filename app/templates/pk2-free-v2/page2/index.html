@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+    <div class="main">
+        <div class="container tim-container" style="max-width:800px; padding-top:100px">
+            <h1 class="text-center">Page 2 <br> Sample
+                <small class="subtitle">A new blueprint to handle another subsection of the applications</small>
+            </h1>
+            <p>Flask starter includes the Flask framework setup to handle logins via flask-login and forms via flask-wtf
+                with error pages.</p>
+            <p>This starter applications uses the Creative Tim 'Get SH IT done' bootstrap template</p>
+            <!--     end extras -->
+        </div>
+        <div class="container tim-container" style="max-width:800px; padding-top:100px">
+            <a href="{{ url_for('main.index') }}" class="btn btn-block btn-lg btn-info btn-round">Main Index Page</a>
+        </div>
+        <div class="space"></div>
+
+
+        <!-- end container -->
+    </div>
+    <!-- end main -->
+
+
+{% endblock %}

@@ -1,33 +1,4 @@
-2018-03-23 13:26:22,208 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:26:55,489 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:27:25,809 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:28:22,201 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:28:51,145 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:30:47,657 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:30:56,801 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:35:41,667 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:36:05,639 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:37:09,658 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:37:23,239 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:38:30,520 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:38:40,358 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:38:40,366 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:38:40,373 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:40:15,428 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:40:19,716 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:40:25,979 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:40:48,843 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:41:34,487 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:43:06,986 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:44:01,481 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:44:47,479 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:44:52,942 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:45:54,081 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:50:04,922 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:50:06,200 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:51:02,994 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:51:16,441 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:51:16,441 ERROR: Exception on /auth/login [POST] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1560]
+2018-04-27 16:00:37,523 ERROR: Exception on /auth/login [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1560]
 Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -41,55 +12,67 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/patryan/Development/mygithub/flask-starter/app/auth/routes.py", line 19, in login
-    user.is_active = True
-AttributeError: can't set attribute
-2018-03-23 13:51:30,353 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:51:45,759 INFO: load_user: user3 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:51:45,760 ERROR: Exception on /auth/login [POST] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1560]
-Traceback (most recent call last):
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask_login/mixins.py", line 37, in get_id
-    return text_type(self.id)
-AttributeError: 'User' object has no attribute 'id'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1517, in handle_user_exception
+  File "/Users/patryan/Development/mygithub/flask-starter/app/auth/routes.py", line 24, in login
+    return render_template('auth/login.html', title='Sign In', form=form, server_message="Example Login page using Creative Tim Template and Flask")
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
+    context, ctx.app)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 116, in _render
+    rv = template.render(context)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/_compat.py", line 33, in reraise
-    raise value
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/patryan/Development/mygithub/flask-starter/app/auth/routes.py", line 19, in login
-    login_user(user, remember=form.remember_me.data)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 161, in login_user
-    user_id = getattr(user, current_app.login_manager.id_attribute)()
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask_login/mixins.py", line 39, in get_id
-    raise NotImplementedError('No `id` attribute - override `get_id`')
-NotImplementedError: No `id` attribute - override `get_id`
-2018-03-23 13:52:11,180 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:52:31,425 INFO: load_user: user3 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:52:31,435 INFO: load_user: user3 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:53:07,030 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:53:17,796 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:53:17,806 INFO: load_user: user2 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:59:40,909 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 13:59:42,673 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 13:59:59,985 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 14:00:00,129 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 14:05:07,533 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 14:06:19,977 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 14:09:57,309 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 14:10:55,434 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 14:11:22,210 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 14:11:37,060 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 14:11:37,188 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:12]
-2018-03-23 14:13:00,899 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
-2018-03-23 14:14:05,287 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:42]
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/patryan/Development/mygithub/flask-starter/app/templates/pk2-free-v2/base.html", line 821, in template
+    <a href="{{ url_for('static', filename='{{ url_for('static', filename='examples/landing.html') }}') }}" target="_blank">
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/Users/patryan/Development/mygithub/flask-starter/app/templates/pk2-free-v2/auth/login.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/patryan/Development/mygithub/flask-starter/app/templates/pk2-free-v2/base.html", line 821, in template
+    <a href="{{ url_for('static', filename='{{ url_for('static', filename='examples/landing.html') }}') }}" target="_blank">
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 875, in subparse
+    add_data(self.parse_tuple(with_condexpr=True))
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 620, in parse_tuple
+    args.append(parse())
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 432, in parse_expression
+    return self.parse_condexpr()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 437, in parse_condexpr
+    expr1 = self.parse_or()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 450, in parse_or
+    left = self.parse_and()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 459, in parse_and
+    left = self.parse_not()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 470, in parse_not
+    return self.parse_compare()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 474, in parse_compare
+    expr = self.parse_math1()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 496, in parse_math1
+    left = self.parse_concat()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 507, in parse_concat
+    args = [self.parse_math2()]
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 517, in parse_math2
+    left = self.parse_pow()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 528, in parse_pow
+    left = self.parse_unary()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 547, in parse_unary
+    node = self.parse_postfix(node)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 676, in parse_postfix
+    node = self.parse_call(node)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 767, in parse_call
+    self.stream.expect('comma')
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/lexer.py", line 384, in expect
+    self.name, self.filename)
+jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'static'
+2018-04-27 16:00:37,525 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:13]

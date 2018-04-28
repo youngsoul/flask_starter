@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
-	<link rel="stylesheet" href="assets/css/nucleo-icons.css">
-	<link rel="stylesheet" href="assets/css/demo.css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/img/favicon.ico') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/nucleo-icons.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/demo.css') }}">
 
-	<link rel="shortcut icon" href="demo/favicon.ico">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='demo/favicon.ico') }}">
 	<title>Paper Kit 2 PRO Web Font</title>
 </head>
 <body>
