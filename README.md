@@ -40,6 +40,7 @@ Changing these config properties will change the themes used by the application.
 
 *href="assets/img/apple-icon.png"*
 
+
 Change this to use the url_for, for the 'static' folder
 
 *href="{{ url_for('static', filename='assets/img/apple-icon.png') }}*
@@ -57,3 +58,9 @@ This flask starter does not use a database, but the users are defined in *config
 ## html_to_jinja.py
 
 This script is a helper script to convert some of the urls, links, img srcs to using Flasks, url_for().  It might not get everything, but it convert a lot of hrefs to use the url_for static resources.
+
+## TODOs
+
+    [] Add simple role based authorization
+    [] Add admin pages for both templates
+    [] Add roles to the config based users
