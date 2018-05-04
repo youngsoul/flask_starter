@@ -64,3 +64,4 @@ This script is a helper script to convert some of the urls, links, img srcs to u
     [] Add simple role based authorization
     [] Add admin pages for both templates
     [] Add roles to the config based users
+    [] use [DataSet](https://dataset.readthedocs.io/en/latest/) for simple user db
