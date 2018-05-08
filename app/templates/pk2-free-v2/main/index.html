@@ -16,6 +16,12 @@
             <p>Click the button to move to another sample page</p>
             <a href="{{ url_for('page2.index') }}" class="btn btn-block btn-lg btn-info btn-round">Another Sample Page</a>
         </div>
+        {% if current_user.has_role('ADMIN') %}
+            <div class="container tim-container" style="max-width:800px; padding-top:100px">
+                <p>You will only see this if you are an admin</p>
+                <a href="{{ url_for('admin.index') }}" class="btn btn-block btn-lg btn-info btn-round">Protected Admin Page</a>
+            </div>
+        {%  endif %}
         <div class="space"></div>
 
 
