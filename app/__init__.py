@@ -26,6 +26,9 @@ def create_app(config_class=Config):
     from app.page2 import page2_bp as page2_bp
     app.register_blueprint(page2_bp, url_prefix='/page2')
 
+    from app.admin import admin_bp as admin_bp
+    app.register_blueprint(admin_bp, url_prefix='/admin')
+
     login_manager.login_view = 'auth.login'
     login_manager.login_message = 'Please log in to access this page.'
 

@@ -1,4 +1,4 @@
-2018-05-07 20:21:27,167 ERROR: Exception on /auth/login [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-05-07 21:30:05,754 ERROR: Exception on /admin/index [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,85 +12,87 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/patryan/Development/mygithub/flask-starter/app/auth/routes.py", line 24, in login
-    return render_template('auth/login.html', title='Sign In', form=form, server_message="Example Login page using Creative Tim Template and Flask")
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
-    context, ctx.app)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
-    rv = template.render(context)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py", line 39, in wrapped
+    if not set(get_current_user_roles()).intersection(set(roles)):
+  File "/Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py", line 28, in get_current_user_roles
+    return current_user['roles']
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/werkzeug/local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+TypeError: 'User' object is not subscriptable
+2018-05-07 21:30:05,765 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:13]
+2018-05-07 21:30:05,788 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-05-07 21:30:05,789 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:30:43,129 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:47]
+2018-05-07 21:30:57,516 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-05-07 21:31:02,930 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:31:03,065 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:31:03,164 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-05-07 21:31:03,164 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:31:05,666 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:31:05,722 ERROR: Exception on /admin/index [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/patryan/Development/mygithub/flask-starter/app/templates/pk2-free-v2/base.html", line 43, in template
-    {% if !current_user.is_anonymous and current_user.has_role('admin') %}
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1005, in render
-    return concat(self.root_render_func(self.new_context(vars)))
-  File "/Users/patryan/Development/mygithub/flask-starter/app/templates/pk2-free-v2/auth/login.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py", line 39, in wrapped
+    if not set(get_current_user_roles()).intersection(set(roles)):
+TypeError: unhashable type: 'list'
+2018-05-07 21:31:05,728 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:13]
+2018-05-07 21:31:05,753 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-05-07 21:31:05,754 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:32:39,662 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:47]
+2018-05-07 21:33:35,085 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-05-07 21:33:39,597 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:33:39,746 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:33:39,896 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-05-07 21:33:39,904 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:33:43,303 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:35:08,270 ERROR: Exception on /admin/index [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/patryan/Development/mygithub/flask-starter/app/templates/pk2-free-v2/base.html", line 43, in template
-    {% if !current_user.is_anonymous and current_user.has_role('admin') %}
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 497, in _parse
-    return Parser(self, source, name, encode_filename(filename)).parse()
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 901, in parse
-    result = nodes.Template(self.subparse(), lineno=1)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/parser.py", line 209, in parse_if
-    node = result = nodes.If(lineno=self.stream.expect('name:if').lineno)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/lexer.py", line 388, in expect
-    next(self)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/lexer.py", line 359, in __next__
-    self.current = next(self._iter)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/lexer.py", line 562, in wrap
-    for lineno, token, value in stream:
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/lexer.py", line 739, in tokeniter
-    name, filename)
-jinja2.exceptions.TemplateSyntaxError: unexpected char '!' at 2268
-2018-05-07 20:21:27,177 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:13]
-2018-05-07 20:21:39,753 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:44]
-2018-05-07 20:21:47,546 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:21:47,714 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:23:07,007 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:24:54,057 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:44]
-2018-05-07 20:25:11,955 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:25:12,089 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:25:40,813 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:44]
-2018-05-07 20:26:06,760 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:26:06,909 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:26:38,105 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:44]
-2018-05-07 20:26:53,650 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:26:53,781 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:27:08,412 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:44]
-2018-05-07 20:28:03,077 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:28:03,229 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:28:40,603 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:44]
-2018-05-07 20:28:54,855 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:28:54,999 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:37:53,438 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:44]
-2018-05-07 20:38:17,899 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:38:18,043 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:38:22,977 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
-2018-05-07 20:38:22,977 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:38:22,985 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
-2018-05-07 20:38:22,985 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:39:25,886 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:44]
-2018-05-07 20:39:43,116 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:39:43,255 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:40:52,712 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:44]
-2018-05-07 20:41:11,584 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:41:11,715 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:41:15,966 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:41:22,593 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:41:22,725 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-05-07 20:42:22,056 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:44]
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py", line 39, in wrapped
+    if not set(get_current_user_roles()).intersection(set(roles)):
+TypeError: unhashable type: 'list'
+2018-05-07 21:35:08,282 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:13]
+2018-05-07 21:35:08,351 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-05-07 21:35:08,354 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 21:36:09,537 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 22:47:43,442 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:47]
+2018-05-07 22:47:46,178 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 22:47:46,526 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-05-07 22:47:46,546 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 22:47:53,463 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 22:48:00,727 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-05-07 22:48:00,732 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 22:49:12,888 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:47]
+2018-05-07 22:49:14,850 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:47]
+2018-05-07 22:49:16,950 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 22:49:17,099 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]
+2018-05-07 22:49:17,100 INFO: load_user: admin [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-05-07 22:49:28,774 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:7]

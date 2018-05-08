@@ -24,8 +24,8 @@ def load_user(id):
 
 
 def get_current_user_roles():
-    if 'roles' in current_user:
-        return current_user['roles']
+    if current_user:
+        return current_user.roles
     else:
         return []
 
@@ -36,7 +36,7 @@ def requires_roles(*roles):
     def wrapper(f):
         @wraps(f)
         def wrapped(*args, **kwargs):
-            if not set(get_current_user_roles()).intersection(set(roles)):
+            if not set(get_current_user_roles()).intersection(set(roles[0])):
                 return error_response()
             return f(*args, **kwargs)
         return wrapped
