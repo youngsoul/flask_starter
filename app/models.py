@@ -28,17 +28,32 @@ THe UserMixin class handles the API.  We need to have an 'id' property.
 """
 class User(UserMixin):
 
-    def __init__(self, username, password):
+    def __init__(self, username, password, roles):
         # self._is_authenticated = False
         # self._is_active = False
         # self._is_anonymous = False
         self.username = username
         self.password_hash = generate_password_hash(password)
         self.id = username
+        self.roles = roles
         pass
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+
+    def has_role(self, role_or_roles):
+        """
+        Does the user have the role passed in
+        :param role_or_roles: either a single string or a list of strings representing role names
+        :return: True if the user has the role(s), False if not
+        """
+        if type(role_or_roles) is not type(list):
+            role_or_roles = [role_or_roles]
+
+        if set(role_or_roles).intersection(set(self.roles)):
+            return True
+        else:
+            return False
 
 
 

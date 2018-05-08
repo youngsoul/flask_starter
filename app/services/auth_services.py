@@ -1,6 +1,10 @@
 from app import login_manager
 from app.models import User
 from flask import current_app
+from config import Config
+from functools import wraps
+from flask_login import current_user
+from werkzeug.exceptions import Unauthorized
 
 @login_manager.user_loader
 def load_user(id):
@@ -11,11 +15,29 @@ def load_user(id):
     """
     current_app.logger.info(f'load_user: {id}')
 
-    users = current_app.config['USERS']
+    users = Config.load_users()
     for user in users:
-        if user[0] == id:
-            return User(user[0],user[1])
+        if user['username'] == id:
+            return User(user['username'],user['password'], user['roles'])
 
     return None
 
 
+def get_current_user_roles():
+    if 'roles' in current_user:
+        return current_user['roles']
+    else:
+        return []
+
+def error_response():
+    raise Unauthorized()
+
+def requires_roles(*roles):
+    def wrapper(f):
+        @wraps(f)
+        def wrapped(*args, **kwargs):
+            if not set(get_current_user_roles()).intersection(set(roles)):
+                return error_response()
+            return f(*args, **kwargs)
+        return wrapped
+    return wrapper

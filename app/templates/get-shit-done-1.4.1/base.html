@@ -54,6 +54,16 @@
 {#                    <li><a href="{{ url_for('static', filename='components.html') }}">Components</a></li>#}
 {##}
 {#                    <li><a href="http://www.creative-tim.com/product/get-shit-done-kit" class="btn btn-round btn-default">Download</a></li>#}
+                  {% if current_user.is_anonymous %}
+                        <h4 class="presentation-subtitle text-center">Anonymous User</h4>
+                    {% else %}
+                        {% if current_user.has_role('ADMIN') %}
+                            <h4 class="presentation-subtitle text-center">ADMIN</h4>
+                        {%  else %}
+                            <h4 class="presentation-subtitle text-center">NOT ADMIN</h4>
+                        {% endif %}
+                    {% endif %}
+
                </ul>
 
             </div><!-- /.navbar-collapse -->

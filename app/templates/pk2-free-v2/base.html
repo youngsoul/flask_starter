@@ -95,6 +95,16 @@
 
     				<h2 class="presentation-subtitle text-center">Make your mark with a Free Bootstrap 4 UI Kit! </h2>
     				<h2 class="presentation-subtitle text-center">Powered By Flask! </h2>
+                    {% if current_user.is_anonymous %}
+                        <h4 class="presentation-subtitle text-center">Anonymous User</h4>
+                    {% else %}
+                        {% if current_user.has_role('ADMIN') %}
+                            <h4 class="presentation-subtitle text-center">ROLE: ADMIN</h4>
+                        {%  else %}
+                            <h4 class="presentation-subtitle text-center">ROLE: NOT ADMIN</h4>
+                        {% endif %}
+                    {% endif %}
+
     			</div>
     		</div>
             <div class="moving-clouds" style="background-image: url( {{ url_for('static', filename='assets/img/clouds.png', _external=True) }} ); ">
