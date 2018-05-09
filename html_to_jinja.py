@@ -11,12 +11,12 @@ It essentially takes all of the href to files, and wraps them in a url_for to th
 It may not get everything, but it does a decent job of getting a lot of the links setup for jinja2 and Flask.
 """
 
+# relative path to the html files to process into jinja2 Flask templates
+tim_files = './app/static/pk2-free-v2/**/*.html'
+
 
 regex = r".*url\(\'(.*)\'\)"
 
-#href="{{ url_for('static', filename='assets/img/apple-icon.png') }}
-#tim_files = './app/static/pk2-free-v2/**/*.html'
-tim_files = './creative-tim/junk3/**/*.html'
 opening_braces = '{{'
 closing_braces = '}}'
 

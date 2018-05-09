@@ -12,6 +12,15 @@ When you navigate to the index page: localhost:5000 if you are running a typical
 
 From the index page, you are able to transition to another page, served from another blueprint.  Just a simple way to show navigating between blueprints and to make sure the static url resolution was working.
 
+
+### Features
+
+- Login required
+- Role based access of routes
+- Protected routes
+- Simple navigation between pages
+
+
 ## Themes
 
 This project has two CreativeTim themse that can be used.
@@ -61,7 +70,9 @@ This script is a helper script to convert some of the urls, links, img srcs to u
 
 ## TODOs
 
-    [] Add simple role based authorization
-    [] Add admin pages for both templates
-    [] Add roles to the config based users
-    [] use [DataSet](https://dataset.readthedocs.io/en/latest/) for simple user db
+    [] Add [Material Dashboard](https://www.creative-tim.com/product/material-dashboard)
+    [] Add axios for Material Dashboard example
+    [] Add [Login Form](https://www.creative-tim.com/product/login-and-register-modal)
+    [X] Add simple role based authorization
+    [X] Add admin pages for both templates
+    [X] Add roles to the config based users
