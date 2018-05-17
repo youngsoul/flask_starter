@@ -20,6 +20,24 @@ From the index page, you are able to transition to another page, served from ano
 - Protected routes
 - Simple navigation between pages
 
+## Assumptions
+
+  1) Python3 is installed
+
+## Setup and Install
+The flask_starter project uses a number of different python packages.  The best way to install everything is the following:
+
+  1) cd to directory where you want to hold the project
+  2) git clone https://github.com/youngsoul/flask_starter
+  3) cd flask_start
+  4) python3 -m venv venv
+  5) source venv/bin/activate
+  6) pip install -r requirements.txt
+
+## Run
+
+To start the server.
+python main.py
 
 ## Themes
 
@@ -37,13 +55,10 @@ TEMPLATES_DIR is the relative pat to the template files, for example, *templates
 
 Changing these config properties will change the themes used by the application.
 
-## Install
 
-- flask
-- flask-wtf
-- flask-login
+# Creative Tim Template Updates
 
-## Creative Tim Updates
+## Html Updates
 
 * where you see:
 
@@ -59,14 +74,17 @@ or, notice the url method around the jinja url_for,
 *... style="background-image: url( {{ url_for('static', filename='assets/img/cover_4.jpg', _external=True) }} )">*
 
 
+## html_to_jinja.py
+
+This script is a helper script to convert some of the urls, links, img srcs to using Flasks, url_for().  It might not get everything, but it convert a lot of hrefs to use the url_for static resources.
+
+To use this script, open the html_to_jinja.py and look for the variable **tim_files** and change the path to the root of the html themed files.
+
+
 ## Users
 
 This flask starter does not use a database, but the users are defined in *config.py*
 
-
-## html_to_jinja.py
-
-This script is a helper script to convert some of the urls, links, img srcs to using Flasks, url_for().  It might not get everything, but it convert a lot of hrefs to use the url_for static resources.
 
 ## TODOs
 
