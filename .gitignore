@@ -221,3 +221,4 @@ Temporary Items
 .apdisk
 
 tests/.pytest_cache/
+tests/logs/
