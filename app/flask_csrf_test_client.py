@@ -8,7 +8,6 @@
 import flask
 from flask.testing import FlaskClient as BaseFlaskClient
 from flask_wtf.csrf import generate_csrf
-from flask import Request
 
 # Flask's assumptions about an incoming request don't quite match up with
 # what the test client provides in terms of manipulating cookies, and the

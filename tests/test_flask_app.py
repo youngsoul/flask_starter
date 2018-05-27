@@ -20,9 +20,10 @@ def test_index(app):
     assert res.status_code==302
 
 def test_get_login(app):
-    res = app.client.get('/auth/login')
-    assert res.status_code==200
-    TestCase().assertIn(b'Anonymous User', res.data)
+    with app.test_request_context():
+        res = app.client.get('/auth/login')
+        assert res.status_code==200
+        TestCase().assertIn(b'Anonymous User', res.data)
 
 def login(app, username, password):
     return app.client.post(
@@ -39,3 +40,4 @@ def test_login(app):
         response = login(app, 'user1', 'user1')
         assert response.status_code == 200
         TestCase().assertIn(b'ROLE: NOT ADMIN', response.data)
+
