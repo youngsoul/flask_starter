@@ -5,9 +5,9 @@ from flask import Flask
 from flask_login import LoginManager
 from config import Config
 from app.flask_csrf_test_client import FlaskCSRFClient
+from app.context_processors import is_active_link
 
 login_manager = LoginManager()
-
 
 def create_app(config_class=Config):
     app = Flask(__name__, static_url_path='', static_folder=Config.STATIC_PATH, template_folder=Config.TEMPLATES_DIR)
@@ -53,6 +53,9 @@ def create_app(config_class=Config):
 
         app.logger.setLevel(logging.INFO)
         app.logger.info('Flask Starter startup')
+
+    # add functions to jinja template engine
+    app.jinja_env.globals.update(is_active_link=is_active_link)
 
     return app
 

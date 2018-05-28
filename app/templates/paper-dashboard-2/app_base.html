@@ -21,7 +21,7 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li>
+          <li class="{{ is_active_link( [url_for('main.index'), '/', '/index']) }}">
             <a href="{{ url_for('main.index') }}">
               <i class="nc-icon nc-bank"></i>
               <p>Dashboard</p>
@@ -39,13 +39,13 @@
               <p>Maps</p>
             </a>
           </li>
-          <li>
+          <li class="{{ is_active_link(['notifications']) }}">
             <a href="{{ url_for('static', filename='./notifications.html') }}">
               <i class="nc-icon nc-bell-55"></i>
               <p>Notifications</p>
             </a>
           </li>
-          <li class="active ">
+          <li class="{{ is_active_link( [url_for('user.user_profile')] ) }}">
             <a href="{{ url_for('user.user_profile') }}">
               <i class="nc-icon nc-single-02"></i>
               <p>User Profile</p>
