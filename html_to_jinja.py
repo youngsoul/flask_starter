@@ -12,8 +12,8 @@ It may not get everything, but it does a decent job of getting a lot of the link
 """
 
 # relative path to the html files to process into jinja2 Flask templates
-tim_files = './app/static/pk2-free-v2/**/*.html'
-
+#tim_files = './app/static/pk2-free-v2/**/*.html'
+tim_files = '/Users/youngsoul/mytmp/paper-dashboard-2-html-v2.0.0/examples/*.html'
 
 regex = r".*url\(\'(.*)\'\)"
 
