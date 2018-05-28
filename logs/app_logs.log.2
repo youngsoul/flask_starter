@@ -1,80 +1,86 @@
-2018-05-27 18:42:23,606 ERROR: Exception on /{{ url_for('static', filename='../assets/js/paper-dashboard.min.js [GET] [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 976, in send_static_file
-    cache_timeout=cache_timeout)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 709, in send_from_directory
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
+2018-05-27 20:38:07,675 ERROR: Exception on / [GET] [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
   File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
-    return handler(e)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py", line 8, in not_found_error
-    return render_template('errors/404.html'), 404
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
-    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
-    source, filename, uptodate = self.get_source(environment, name)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
-    return self._get_source_fast(environment, template)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: errors/404.html
-2018-05-27 18:42:23,608 ERROR: Exception on /{{ url_for('static', filename='../assets/css/paper-dashboard.css [GET] [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
   File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
   File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 976, in send_static_file
-    cache_timeout=cache_timeout)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 709, in send_from_directory
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 259, in decorated_view
+    elif not current_user.is_authenticated:
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py", line 21, in load_user
+    return User(user) #User(user['username'],user['password'], user['roles'])
+TypeError: __init__() missing 2 required positional arguments: 'password' and 'roles'
+2018-05-27 20:38:07,706 ERROR: server error [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:13]
+2018-05-27 20:38:07,710 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:39:08,016 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
+2018-05-27 20:39:09,663 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:39:09,770 ERROR: Exception on / [GET] [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
   File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1713, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1644, in handle_http_exception
-    return handler(e)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py", line 8, in not_found_error
-    return render_template('errors/404.html'), 404
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
-    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
-    source, filename, uptodate = self.get_source(environment, name)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
-    return self._get_source_fast(environment, template)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: errors/404.html
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 259, in decorated_view
+    elif not current_user.is_authenticated:
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/local.py", line 306, in _get_current_object
+    return self.__local()
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 335, in _get_user
+    current_app.login_manager._load_user()
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/login_manager.py", line 359, in _load_user
+    return self.reload_user()
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/login_manager.py", line 321, in reload_user
+    user = self.user_callback(user_id)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py", line 21, in load_user
+    return User(user['username'],user['password'], user['roles'], users)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/models.py", line 42, in __init__
+    setattr(self, key, dictionary[key])
+TypeError: list indices must be integers or slices, not dict
+2018-05-27 20:39:09,790 ERROR: server error [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:13]
+2018-05-27 20:39:09,794 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:39:22,414 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
+2018-05-27 20:39:23,515 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:39:28,406 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:39:28,494 INFO: User: <app.models.User object at 0x1043da438> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
+2018-05-27 20:39:28,495 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:42:03,142 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
+2018-05-27 20:42:09,965 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:42:12,601 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:42:12,694 INFO: User: <app.models.User object at 0x1044de390> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
+2018-05-27 20:42:12,697 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:46:07,138 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
+2018-05-27 20:46:26,793 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:46:27,018 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:46:32,083 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-27 20:46:32,218 INFO: User: <app.models.User object at 0x104754c88> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
+2018-05-27 20:46:32,226 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]

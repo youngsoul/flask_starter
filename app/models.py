@@ -28,7 +28,7 @@ THe UserMixin class handles the API.  We need to have an 'id' property.
 """
 class User(UserMixin):
 
-    def __init__(self, username, password, roles):
+    def __init__(self, username, password, roles, *initial_data, **kwargs):
         # self._is_authenticated = False
         # self._is_active = False
         # self._is_anonymous = False
@@ -36,7 +36,13 @@ class User(UserMixin):
         self.password_hash = generate_password_hash(password)
         self.id = username
         self.roles = roles
-        pass
+        for dictionary in initial_data:
+            for key in dictionary:
+                if key not in ['username', 'password', 'roles']:
+                    setattr(self, key, dictionary[key])
+        for key in kwargs:
+            if key not in ['username', 'password', 'roles']:
+                setattr(self, key, kwargs[key])
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)

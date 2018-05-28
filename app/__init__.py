@@ -34,6 +34,9 @@ def create_app(config_class=Config):
     from app.admin import admin_bp as admin_bp
     app.register_blueprint(admin_bp, url_prefix='/admin')
 
+    from app.user_profile import user_profile_bp as user_profile_bp
+    app.register_blueprint(user_profile_bp, url_prefix='/user')
+
     login_manager.login_view = 'auth.login'
     login_manager.login_message = 'Please log in to access this page.'
 

@@ -18,7 +18,7 @@ def load_user(id):
     users = Config.load_users()
     for user in users:
         if user['username'] == id:
-            return User(user['username'],user['password'], user['roles'])
+            return User(user['username'],user['password'], user['roles'], user)
 
     return None
 
