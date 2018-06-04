@@ -64,6 +64,8 @@ class Config(object):
     CONTENT_DIR = 'paper-dashboard-2'
     STATIC_PATH = f'static/{CONTENT_DIR}'
     TEMPLATES_DIR=f'templates/{CONTENT_DIR}'
+    # url for the spotify top 'n' jam songs
+    spotify_top_30_url = 'https://open.spotify.com/user/thesoundsofspotify/playlist/1z1LfuAoQQDRKLOyVQvaRa'
 
     @staticmethod
     def load_users():

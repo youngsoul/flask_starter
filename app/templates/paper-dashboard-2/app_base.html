@@ -51,8 +51,8 @@
               <p>User Profile</p>
             </a>
           </li>
-          <li>
-            <a href="{{ url_for('static', filename='./tables.html') }}">
+          <li class="{{ is_active_link( [url_for('tables.tables')] ) }}">
+            <a href="{{ url_for('tables.tables') }}">
               <i class="nc-icon nc-tile-56"></i>
               <p>Table List</p>
             </a>
@@ -76,3 +76,11 @@
       {% endblock %}
   </div>
 {% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='/assets/js/vue.min.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='/assets/js/axios.min.js') }}" type="text/javascript"></script>
+
+{% endblock %}
+
