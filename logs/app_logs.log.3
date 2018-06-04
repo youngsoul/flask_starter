@@ -1,74 +1,79 @@
-2018-06-03 19:56:58,448 ERROR: Exception on /tables/ [GET] [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-06-03 20:08:06,231 ERROR: Exception on /tables/dyndata [GET] [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/wrappers.py", line 921, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/wrappers.py", line 59, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/test.py", line 923, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'dict' object is not callable
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/tables/routes.py", line 12, in tables
-    return render_template('tables/tables.html', table_title="Spotify Top 30 Jam", data=top_30_songs)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
-    context, ctx.app)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
-    rv = template.render(context)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1982, in make_response
+    reraise(TypeError, new_error, sys.exc_info()[2])
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/_compat.py", line 34, in reraise
     raise value.with_traceback(tb)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/templates/paper-dashboard-2/tables/tables.html", line 1, in top-level template code
-    {% extends 'app_base.html' %}
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/templates/paper-dashboard-2/app_base.html", line 1, in top-level template code
-    {% extends 'base.html' %}
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/templates/paper-dashboard-2/base.html", line 29, in top-level template code
-    {% block app_content %}
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/templates/paper-dashboard-2/app_base.html", line 75, in block "app_content"
-    {% block main_content %}
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/templates/paper-dashboard-2/tables/tables.html", line 128, in block "main_content"
-    <button class="btn btn-outline-primary btn-round" v-on:click="refresh_data({{ url_for('tables.dyndata') }})">
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 356, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 2061, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
-    raise value
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
-    force_external=external)
-  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1776, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'tables.dyndata'. Did you mean 'tables.dyn_data' instead?
-2018-06-03 19:56:58,456 ERROR: server error [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:13]
-2018-06-03 19:56:59,231 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
-2018-06-03 19:57:17,313 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
-2018-06-03 19:57:21,064 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 19:57:22,475 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
-2018-06-03 19:57:33,397 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 19:57:34,813 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 19:57:36,250 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
-2018-06-03 19:58:11,732 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 19:58:11,934 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 19:58:14,341 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 19:58:35,467 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
-2018-06-03 19:58:46,145 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 19:58:46,350 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 19:58:48,823 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 19:58:58,799 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
-2018-06-03 20:06:21,305 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
-2018-06-03 20:06:23,396 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 20:06:26,297 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
-2018-06-03 20:07:51,355 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
-2018-06-03 20:07:53,288 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-06-03 20:07:55,039 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
-2018-06-03 20:08:06,138 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1974, in make_response
+    rv = self.response_class.force_type(rv, request.environ)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/wrappers.py", line 921, in force_type
+    response = BaseResponse(*_run_wsgi_app(response, environ))
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/wrappers.py", line 59, in _run_wsgi_app
+    return _run_wsgi_app(*args)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/test.py", line 923, in run_wsgi_app
+    app_rv = app(environ, start_response)
+TypeError: 'dict' object is not callable
+The view function did not return a valid response. The return type must be a string, tuple, Response instance, or WSGI callable, but it was a dict.
+2018-06-03 20:08:06,242 ERROR: server error [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:13]
+2018-06-03 20:08:06,337 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
+2018-06-03 20:09:29,065 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
+2018-06-03 20:09:31,778 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 20:09:34,168 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
+2018-06-03 20:09:38,009 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 20:41:06,700 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
+2018-06-03 20:41:08,516 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 20:41:11,140 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
+2018-06-03 20:41:19,252 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:08:01,732 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
+2018-06-03 21:08:03,782 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:08:06,380 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
+2018-06-03 21:08:11,104 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:08:52,406 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
+2018-06-03 21:08:55,769 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:08:57,886 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
+2018-06-03 21:09:01,246 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:11:45,906 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
+2018-06-03 21:11:48,742 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:11:51,391 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
+2018-06-03 21:11:55,597 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:16:56,692 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
+2018-06-03 21:17:07,776 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:17:08,029 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:17:10,947 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:17:15,797 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:17:21,826 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
+2018-06-03 21:19:03,071 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
+2018-06-03 21:19:09,462 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:19:11,322 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
+2018-06-03 21:19:16,960 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:37:38,845 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
+2018-06-03 21:37:47,249 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:37:49,095 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
+2018-06-03 21:37:53,218 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:41:18,974 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
+2018-06-03 21:41:20,976 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:41:23,705 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
+2018-06-03 21:41:27,085 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:41:31,647 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:41:36,346 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-06-03 21:45:26,801 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:58]
+2018-06-03 21:45:40,303 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]

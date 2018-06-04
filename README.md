@@ -6,6 +6,8 @@ This project will be a starter project using Flask and creative-tim.com themes c
 
 [Paper Kit 2](https://www.creative-tim.com/product/paper-kit-2)
 
+[Paper Dashboard 2](https://www.creative-tim.com/product/paper-dashboard-2)
+
 This project will use flask-login, blueprints for a basic starter with a login and a landing page.  It will not use a database but this can be added later.
 
 When you navigate to the index page: localhost:5000 if you are running a typical flask web server, if you are not logged in you will be redirected to the login page.  Once logged in you are navigated back to the index page.
@@ -19,6 +21,10 @@ From the index page, you are able to transition to another page, served from ano
 - Role based access of routes
 - Protected routes
 - Simple navigation between pages
+
+#### Paper Dashboard 2
+This template has Vue.js integrated into it and Axios for remote Ajax calls to the Flask server.  The Vue.js integration is a light integration at the Jinja template level.  It is meant to be a very light touch way to get the benefits of Vue.js while still leverage the more traditional Jinja template approach.
+
 
 ## Assumptions
 
@@ -44,6 +50,12 @@ python main.py
 This project has two CreativeTim themse that can be used.
 
 In *config.py* there are two configuration parameters to set the theme:
+
+**CONTENT_DIR**
+This is the name of the content directory that will be in *templates* and *static*.
+
+Changing the value of the CONTENT_DIR will automatically update the STATIC_PATH and TEMPLATES_DIR.
+
 
 **STATIC_PATH**
 
@@ -88,9 +100,8 @@ This flask starter does not use a database, but the users are defined in *config
 
 ## TODOs
 
-    [] Add [Material Dashboard](https://www.creative-tim.com/product/material-dashboard)
-    [] Add axios for Material Dashboard example
-    [] Add [Login Form](https://www.creative-tim.com/product/login-and-register-modal)
+    [X] Add [Paper Dashboard 2](https://www.creative-tim.com/product/paper-dashboard-2)
+    [X] Add axios for Dashboard example
     [X] Add simple role based authorization
     [X] Add admin pages for both templates
     [X] Add roles to the config based users

@@ -1,62 +1,59 @@
-2018-05-27 21:10:47,185 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
-2018-05-27 21:11:01,481 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:11:01,744 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:12:23,684 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
-2018-05-27 21:12:39,247 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:12:39,555 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:12:43,116 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:12:43,213 INFO: User: <app.models.User object at 0x1045ff978> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
-2018-05-27 21:12:43,215 INFO: load_user: user2 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:13:06,665 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
-2018-05-27 21:13:24,196 INFO: load_user: user3 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:13:24,439 INFO: load_user: user3 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:13:27,789 INFO: load_user: user3 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:13:27,897 INFO: User: <app.models.User object at 0x104676978> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
-2018-05-27 21:13:27,900 INFO: load_user: user3 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:13:30,414 INFO: load_user: user3 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:13:33,900 INFO: load_user: user3 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:13:34,023 INFO: User: <app.models.User object at 0x10472aa90> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
-2018-05-27 21:13:34,026 INFO: load_user: user3 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:15:03,715 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
-2018-05-27 21:15:28,639 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:15:28,858 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:15:37,130 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:15:40,503 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:15:40,598 INFO: User: <app.models.User object at 0x103d70748> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
-2018-05-27 21:15:40,599 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:15:44,718 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-27 21:15:47,900 ERROR: File not found [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:7]
-2018-05-27 21:15:47,901 INFO: load_user: user1 [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 07:40:51,248 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
-2018-05-28 07:41:10,215 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 07:41:10,421 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 07:41:16,866 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 07:41:16,958 INFO: User: <app.models.User object at 0x103c7f278> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
-2018-05-28 07:41:16,958 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 07:55:53,982 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:54]
-2018-05-28 07:56:00,178 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 07:57:05,145 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 07:57:05,231 INFO: User: <app.models.User object at 0x10451d630> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
-2018-05-28 07:57:05,233 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:02:41,130 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:54]
-2018-05-28 08:05:16,120 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:54]
-2018-05-28 08:05:28,194 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:54]
-2018-05-28 08:07:25,485 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
-2018-05-28 08:07:29,679 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:07:45,211 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:07:45,303 INFO: User: <app.models.User object at 0x1044db6d8> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
-2018-05-28 08:07:45,305 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:09:07,936 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
-2018-05-28 08:09:17,329 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:10:23,527 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
-2018-05-28 08:10:26,055 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:10:31,291 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:10:31,379 INFO: User: <app.models.User object at 0x1045d09b0> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
-2018-05-28 08:10:31,381 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:12:02,989 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
-2018-05-28 08:12:08,394 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:12:11,158 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:12:11,244 INFO: User: <app.models.User object at 0x1045e1518> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
-2018-05-28 08:12:11,246 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:12:14,784 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
-2018-05-28 08:12:16,717 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-28 08:12:16,804 INFO: User: <app.models.User object at 0x10441cd30> [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/user_profile/routes.py:13]
+2018-05-28 08:12:16,817 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-28 08:12:35,641 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-28 08:14:22,016 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
+2018-05-28 08:14:23,503 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-28 08:14:44,484 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-28 08:16:21,136 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
+2018-05-28 08:16:23,153 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-28 08:17:10,748 INFO: Flask Starter startup [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/__init__.py:55]
+2018-05-28 08:17:12,618 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
+2018-05-28 08:17:17,940 ERROR: Exception on / [GET] [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/main/routes.py", line 15, in index
+    return render_template('main/index.html', server_message="Flask, Jinja and Creative Tim.. working together!")
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/templates/paper-dashboard-2/main/index.html", line 1, in top-level template code
+    {% extends 'app_base.html' %}
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/templates/paper-dashboard-2/app_base.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/templates/paper-dashboard-2/base.html", line 29, in top-level template code
+    {% block app_content %}
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/templates/paper-dashboard-2/app_base.html", line 48, in block "app_content"
+    <li class="{{ is_active_link( url_for(['user.user_profile']) ) }}">
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/flask/helpers.py", line 345, in url_for
+    force_external=external)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1774, in build
+    rv = self._partial_build(endpoint, values, method, append_unknown)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1689, in _partial_build
+    append_unknown)
+  File "/Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/venv/lib/python3.6/site-packages/werkzeug/routing.py", line 1695, in _partial_build
+    for rule in self.map._rules_by_endpoint.get(endpoint, ()):
+TypeError: unhashable type: 'list'
+2018-05-28 08:17:17,957 ERROR: server error [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/errors/handlers.py:13]
+2018-05-28 08:17:32,865 INFO: load_user: admin [in /Users/youngsoul/Documents/Development/PythonDev/FlaskProjects/flask_starter/app/services/auth_services.py:16]
