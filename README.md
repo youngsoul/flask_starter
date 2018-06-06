@@ -21,6 +21,7 @@ From the index page, you are able to transition to another page, served from ano
 - Role based access of routes
 - Protected routes
 - Simple navigation between pages
+- Integration with Vue.js and axios (Paper Dashboard2)
 
 #### Paper Dashboard 2
 This template has Vue.js integrated into it and Axios for remote Ajax calls to the Flask server.  The Vue.js integration is a light integration at the Jinja template level.  It is meant to be a very light touch way to get the benefits of Vue.js while still leverage the more traditional Jinja template approach.
@@ -47,15 +48,22 @@ python main.py
 
 ## Themes
 
-This project has two CreativeTim themse that can be used.
+This project has three CreativeTim (www.creative-tim.com) themes that can be used.
 
-In *config.py* there are two configuration parameters to set the theme:
+In *config.py* there are three configuration parameters to set the theme:
 
 **CONTENT_DIR**
 This is the name of the content directory that will be in *templates* and *static*.
 
 Changing the value of the CONTENT_DIR will automatically update the STATIC_PATH and TEMPLATES_DIR.
 
+The current values are one of:
+
+```python
+    #CONTENT_DIR = 'get-shit-done-1.4.1'
+    #CONTENT_DIR = 'pk2-free-v2'
+    #CONTENT_DIR = 'paper-dashboard-2'
+```
 
 **STATIC_PATH**
 
@@ -100,8 +108,9 @@ This flask starter does not use a database, but the users are defined in *config
 
 ## TODOs
 
-    [X] Add [Paper Dashboard 2](https://www.creative-tim.com/product/paper-dashboard-2)
-    [X] Add axios for Dashboard example
-    [X] Add simple role based authorization
-    [X] Add admin pages for both templates
-    [X] Add roles to the config based users
+    [] Finish remaining pages for Paper Dashboard 2
+    [] Create an Admin page for Paper Dashboard 2
+    [] Add logout to Paper Dashboard 2
+    [] Add read data connections to Paper Dashboard 2
+
+![Get SH IT Done](./creative-tim/images/getshitdone.png)
