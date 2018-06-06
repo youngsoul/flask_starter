@@ -113,4 +113,11 @@ This flask starter does not use a database, but the users are defined in *config
     [] Add logout to Paper Dashboard 2
     [] Add read data connections to Paper Dashboard 2
 
+## Get SH IT Done Landing Page Screen Capture
 ![Get SH IT Done](./creative-tim/images/getshitdone.png)
+
+## Paper Kit 2 Landing Page Screen Capture
+![Paper Kit 2](./creative-tim/images/paperkit2.png)
+
+## Paper Dashboard 2 Landing Page Screen Capture
+![Paper Dashboard 2](./creative-tim/images/paperdashboard2.png)
