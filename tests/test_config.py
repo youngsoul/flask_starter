@@ -33,8 +33,12 @@ class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'YOU WILL NEVER GUESS'
     #STATIC_PATH = 'static/get-shit-done-1.4.1'
     #TEMPLATES_DIR='templates/get-shit-done-1.4.1'
-    STATIC_PATH = '/Users/patryan/Development/mygithub/flask-starter/app/static/pk2-free-v2'
-    TEMPLATES_DIR='/Users/patryan/Development/mygithub/flask-starter/app/templates/pk2-free-v2'
+    #CONTENT_DIR = 'get-shit-done-1.4.1'
+    CONTENT_DIR = 'pk2-free-v2'
+    #CONTENT_DIR = 'paper-dashboard-2'
+    STATIC_PATH = f'static/{CONTENT_DIR}'
+    TEMPLATES_DIR=f'templates/{CONTENT_DIR}'
+
 
     @staticmethod
     def load_users():
