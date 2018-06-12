@@ -41,3 +41,7 @@ def test_login(app):
         assert response.status_code == 200
         TestCase().assertIn(b'ROLE: NOT ADMIN', response.data)
 
+def test_tables(app):
+    res = app.client.get('/tables/')
+    assert res.status_code==200
+    print(res.data)

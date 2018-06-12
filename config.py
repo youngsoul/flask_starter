@@ -60,8 +60,8 @@ class Config(object):
     # needed by flask wtf for CSRC
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'YOU WILL NEVER GUESS'
     #CONTENT_DIR = 'get-shit-done-1.4.1'
-    #CONTENT_DIR = 'pk2-free-v2'
-    CONTENT_DIR = 'paper-dashboard-2'
+    CONTENT_DIR = 'pk2-free-v2'
+    #CONTENT_DIR = 'paper-dashboard-2'
     STATIC_PATH = f'static/{CONTENT_DIR}'
     TEMPLATES_DIR=f'templates/{CONTENT_DIR}'
     # url for the spotify top 'n' jam songs

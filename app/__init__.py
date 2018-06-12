@@ -3,14 +3,13 @@ from logging.handlers import RotatingFileHandler
 import os
 from flask import Flask
 from flask_login import LoginManager
-from config import Config
 from app.flask_csrf_test_client import FlaskCSRFClient
 from app.context_processors import is_active_link
 
 login_manager = LoginManager()
 
-def create_app(config_class=Config):
-    app = Flask(__name__, static_url_path='', static_folder=Config.STATIC_PATH, template_folder=Config.TEMPLATES_DIR)
+def create_app(config_class=None):
+    app = Flask(__name__, static_url_path='', static_folder=config_class.STATIC_PATH, template_folder=config_class.TEMPLATES_DIR)
     app.config.from_object(config_class)
 
     # override the default test_client with one that support csrf
