@@ -13,9 +13,19 @@ It may not get everything, but it does a decent job of getting a lot of the link
 
 # relative path to the html files to process into jinja2 Flask templates
 #tim_files = './app/static/pk2-free-v2/**/*.html'
-tim_files = '/Users/youngsoul/mytmp/paper-dashboard-2-html-v2.0.0/examples/*.html'
+#tim_files = '/Users/youngsoul/mytmp/paper-dashboard-2-html-v2.0.0/examples/*.html'
+tim_files = '/Users/patryan/junk/paper-dashboard-2-pro-html-v2.0.1/**/*.html'
 
+# looks for url patterns
 regex = r".*url\(\'(.*)\'\)"
+
+# looks for patterns like:
+# .css?v2.0.1
+# converts something like:
+#  <link href="{{ url_for('static', filename='../assets/css/paper-dashboard.css?v=2.0.1') }}" rel="stylesheet" />
+# to:
+#   <link href="{{ url_for('static', filename='../assets/css/paper-dashboard.css') }}" rel="stylesheet" />
+css_version_regex = r"\.css(\?v=\d.\d.\d)"
 
 opening_braces = '{{'
 closing_braces = '}}'
@@ -50,10 +60,21 @@ def process_html(html_doc, filename='Internal'):
             'href'].startswith('{{'):
             href = anchor['href']
             if href not in href_dict:
-                # print(f"\t{href}")
+                print(f"\t{href}")
+                original_href = href
+                # check to see if the href has .css?v=x,y,z
+                # creative-tim likes to add this version string nd I cannot figure out how to get jinja to
+                # accept this.
+                try:
+                    if 'css?v=' in href:
+                        href = re.sub(css_version_regex, "", href, 0, re.MULTILINE) + ".css"
+                        print(href)
+                except:
+                    pass
+
                 replacement_href = f"{opening_braces} url_for('static', filename='{href}') {closing_braces}"
-                # print(f"\t\t{replacement_href}")
-                html_doc = html_doc.replace(href, replacement_href)
+                print(f"\t\t{replacement_href}")
+                html_doc = html_doc.replace(original_href, replacement_href)
                 changed_file = True
                 href_dict[href] = href
     imgs = soup.findAll('img', src=True)
@@ -116,71 +137,4 @@ if __name__ == '__main__':
 
     process_all_files(tim_files)
 
-    # changed_file, updated_files = process_html("""
-    #                 <div class="nav-tabs-navigation">
-    #                 <div class="nav-tabs-wrapper">
-    #                     <ul class="nav nav-tabs" role="tablist">
-    #                         <li class="nav-item">
-    #                             <a class="nav-link active" data-toggle="tab" href="#follows" role="tab">Follows</a>
-    #                         </li>
-    #                         <li class="nav-item">
-    #                             <a class="nav-link" data-toggle="tab" href="#following" role="tab">Following</a>
-    #                         </li>
-    #                     </ul>
-    #                 </div>
-    #             </div>
-    #             <!-- Tab panes -->
-    #             <div class="tab-content following">
-    #                 <div class="tab-pane active" id="follows" role="tabpanel">
-    #                     <div class="row">
-    #                         <div class="col-md-6 ml-auto mr-auto">
-    #                             <ul class="list-unstyled follows">
-    #                                 <li>
-    #                                     <div class="row">
-    #                                         <div class="col-md-2 col-sm-2 ml-auto mr-auto">
-    #                                             <img src="../assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-    #                                         </div>
-    #                                         <div class="col-md-7 col-sm-4  ml-auto mr-auto">
-    #                                             <h6>Flume<br/><small>Musical Producer</small></h6>
-    #                                         </div>
-    #                                         <div class="col-md-3 col-sm-2  ml-auto mr-auto">
-		# 										<div class="form-check">
-		# 			                                <label class="form-check-label">
-		# 			                                    <input class="form-check-input" type="checkbox" value="" checked>
-		# 			                                    <span class="form-check-sign"></span>
-		# 			                                </label>
-		# 			                            </div>
-    #                                         </div>
-    #                                     </div>
-    #                                 </li>
-    #                                 <hr />
-    #                                 <li>
-    #                                     <div class="row">
-    #                                         <div class="col-md-2 ml-auto mr-auto ">
-    #                                             <img src="../assets/img/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-    #                                         </div>
-    #                                         <div class="col-md-7 col-sm-4">
-    #                                             <h6>Banks<br /><small>Singer</small></h6>
-    #                                         </div>
-    #                                         <div class="col-md-3 col-sm-2">
-		# 										<div class="form-check">
-		# 			                                <label class="form-check-label">
-		# 			                                    <input class="form-check-input" type="checkbox" value="">
-		# 			                                    <span class="form-check-sign"></span>
-		# 			                                </label>
-		# 			                            </div>
-    #                                         </div>
-    #                                     </div>
-    #                                 </li>
-    #                             </ul>
-    #                         </div>
-    #                     </div>
-    #                 </div>
-    #                 <div class="tab-pane text-center" id="following" role="tabpanel">
-    #                     <h3 class="text-muted">Not following anyone yet :(</h3>
-    #                     <button class="btn btn-warning btn-round">Find artists</button>
-    #                 </div>
-    #             </div>""")
-
-
-    print(updated_files[0][1])
+    #print(updated_files[0][1])
