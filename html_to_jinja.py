@@ -119,6 +119,8 @@ def process_all_files(html_files_path):
     :param html_files_path:
     :return: changed_file (True if files were changed, False if no files were changed), updated_files tuple of filename, and changed html_doc string
     """
+    changed_file = ''
+    updated_files = []
     for filename in glob.iglob(html_files_path, recursive=True):
         print(f'************File: {filename}')
         with open(filename, 'r') as f:
