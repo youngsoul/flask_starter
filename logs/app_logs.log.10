@@ -1,4 +1,4 @@
-2018-06-12 22:36:49,051 ERROR: Exception on /assets/js/core/bootstrap.min.js.map [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-06-12 22:36:49,094 ERROR: Exception on /assets/js/core/bootstrap.min.js.map [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
@@ -38,7 +38,9 @@ Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: errors/404.html
-2018-06-12 22:36:49,051 ERROR: Exception on /assets/js/_site_dashboard_pro/assets/js/dashboard-pro.js.map [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-06-12 22:36:49,099 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
+2018-06-12 22:36:49,100 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:8]
+2018-06-12 22:36:49,101 ERROR: Exception on /assets/js/_site_dashboard_pro/assets/js/dashboard-pro.js.map [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
@@ -78,6 +80,5 @@ Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: errors/404.html
-2018-06-12 22:36:49,087 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
-2018-06-12 22:36:49,088 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
-2018-06-12 22:36:49,094 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:8]
+2018-06-12 22:36:49,102 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
+2018-06-12 22:36:49,104 ERROR: File not found [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:8]

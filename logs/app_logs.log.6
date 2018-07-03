@@ -1,4 +1,6 @@
-2018-06-12 22:37:49,168 ERROR: Exception on / [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-06-12 22:38:18,580 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-06-12 22:38:18,641 ERROR: Template Not Found: main/index.html [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:19]
+2018-06-12 22:38:18,642 ERROR: Exception on /index [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
@@ -50,12 +52,10 @@ Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: errors/template_not_found.html
-2018-06-12 22:37:49,169 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
-2018-06-12 22:37:59,519 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:57]
-2018-06-12 22:38:09,598 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-06-12 22:38:18,501 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-06-12 22:38:18,555 ERROR: Template Not Found: main/index.html [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:19]
-2018-06-12 22:38:18,556 ERROR: Exception on /index [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-06-12 22:38:18,646 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
+2018-06-12 22:38:18,655 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-06-12 22:38:18,712 ERROR: Template Not Found: main/index.html [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:19]
+2018-06-12 22:38:18,714 ERROR: Exception on /index [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
@@ -107,4 +107,3 @@ Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: errors/template_not_found.html
-2018-06-12 22:38:18,567 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
