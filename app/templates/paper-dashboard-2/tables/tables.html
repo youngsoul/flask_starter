@@ -122,44 +122,60 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="row">
                     <div class="col-md-12">
-                        <div class="card card-plain">
-                            <div class="card-header">
-                                <h4 class="card-title"> Table Uses Axios to refresh random data</h4>
-                                <p class="card-category">Shows use of Vue and Axios to update table</p>
-                                <div>
-                                    <button class="btn btn-outline-primary btn-round"
-                                            v-on:click="refresh_data('{{ url_for('tables.dyn_data') }}')">
-                                        <i class="fa fa-refresh"></i> Refresh
-                                    </button>
+                        <p>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                Show Vue/Axios table example
+                            </button>
+                        </p>
+                    </div> <!-- end col 12 -->
+                </div> <!-- end row -->
+                <div class="collapse" id="collapseExample">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card card-plain">
+                                <div class="card-header">
+                                    <h4 class="card-title"> Table Uses Axios to refresh random data</h4>
+                                    <p class="card-category">Shows use of Vue and Axios to update table</p>
+                                    <div>
+                                        <button class="btn btn-outline-primary btn-round"
+                                                v-on:click="refresh_data('{{ url_for('tables.dyn_data') }}')">
+                                            <i class="fa fa-refresh"></i> Refresh
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class=" text-primary">
-                                        <th v-for="col in columns">[[ col ]]</th>
-                                        </thead>
-                                        <tbody>
-                                        <tr v-for="row in rows">
-                                            <td v-for="col in columns">[[ row[col] ]]</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead class=" text-primary">
+                                            <th v-for="col in columns">[[ col ]]</th>
+                                            </thead>
+                                            <tbody>
+                                            <tr v-for="row in rows">
+                                                <td v-for="col in columns">[[ row[col] ]]</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
-                {% block footer_content %}
-        {% endblock %}
+            {% block footer_content %}
+            {% endblock %}
 
         </div>
     </div>
 {% endblock %}
 
-{% block scripts %}
+{% block script_content %}
     {{ super() }}
     <script>
         var refresh_svc = new Vue({
@@ -174,16 +190,18 @@
             },
             methods: {
                 refresh_data: function (param1) {
-                    console.log('refresh data function called: ' + param1)
+                    console.log('refresh data function called: ' + param1);
+                    NProgress.start();
                     axios.get(param1)
                         .then(response => {
                             console.log(response.data);
                             this.rows = response.data.rows;
                             this.columns = response.data.columns;
-
+                            NProgress.done();
                         })
                         .catch(error => {
                             console.log(error);
+                            NProgress.done();
                         });
                 }
             }

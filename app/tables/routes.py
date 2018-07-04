@@ -3,6 +3,7 @@ from flask_login import login_required
 from flask import current_app, render_template, url_for, jsonify
 from app.services.spotify_services import get_top_30
 from random import randint
+import time
 
 @tables_bp.route('/', methods=['GET'])
 @login_required
@@ -16,6 +17,8 @@ def tables():
 @login_required
 def dyn_data():
     print("dyn data called")
+    time.sleep(randint(1,3))
+
     columns = []
     for i in range(1, randint(3,6)+1):
         columns.append(f'Column {i}')

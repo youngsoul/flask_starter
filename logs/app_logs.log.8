@@ -1,4 +1,8 @@
-2018-06-12 22:37:49,168 ERROR: Exception on / [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
+2018-06-12 22:38:18,717 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
+2018-06-12 22:39:08,339 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-06-12 22:39:21,499 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-06-12 22:39:21,557 ERROR: Template Not Found: main/index.html [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:19]
+2018-06-12 22:39:21,558 ERROR: Exception on / [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
     rv = self.dispatch_request()
@@ -50,61 +54,6 @@ Traceback (most recent call last):
   File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
     raise TemplateNotFound(template)
 jinja2.exceptions.TemplateNotFound: errors/template_not_found.html
-2018-06-12 22:37:49,169 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
-2018-06-12 22:37:59,519 INFO: Flask Starter startup [in /Users/patryan/Development/mygithub/flask-starter/app/__init__.py:57]
-2018-06-12 22:38:09,598 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-06-12 22:38:18,501 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
-2018-06-12 22:38:18,555 ERROR: Template Not Found: main/index.html [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:19]
-2018-06-12 22:38:18,556 ERROR: Exception on /index [GET] [in /Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask_login/utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/patryan/Development/mygithub/flask-starter/app/main/routes.py", line 15, in index
-    return render_template('main/index.html', server_message="Flask, Jinja and Creative Tim.. working together!")
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
-    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
-    source, filename, uptodate = self.get_source(environment, name)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
-    return self._get_source_fast(environment, template)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: main/index.html
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/app.py", line 1719, in handle_user_exception
-    return handler(e)
-  File "/Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py", line 20, in template_not_found
-    return render_template('errors/template_not_found.html'), 404
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 134, in render_template
-    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/jinja2/loaders.py", line 113, in load
-    source, filename, uptodate = self.get_source(environment, name)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 58, in get_source
-    return self._get_source_fast(environment, template)
-  File "/Users/patryan/Development/mygithub/flask-starter/venv/lib/python3.6/site-packages/flask/templating.py", line 86, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: errors/template_not_found.html
-2018-06-12 22:38:18,567 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
+2018-06-12 22:39:21,561 ERROR: server error [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:14]
+2018-06-12 22:39:21,571 INFO: load_user: user1 [in /Users/patryan/Development/mygithub/flask-starter/app/services/auth_services.py:16]
+2018-06-12 22:39:21,624 ERROR: Template Not Found: main/index.html [in /Users/patryan/Development/mygithub/flask-starter/app/errors/handlers.py:19]
