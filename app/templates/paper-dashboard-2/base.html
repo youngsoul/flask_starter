@@ -91,6 +91,16 @@
     <script src="{{ url_for('static', filename='/assets/js/nprogress.js') }}" type="text/javascript"></script>
 
     <script>
+
+        // when deploying to AWS via zappa, the url is like:
+        // https://some aws url/dev
+        // or
+        // https://some aws url/prod
+        // and the base url that axios tries to use is just the 'some aws url' without the /dev or /prod
+        // I could not find a way for it to read the entire url so this is a hack to get the full url
+        // to axios.
+        var host_path = '';
+
         $('.pick-class-label').click(function () {
             var new_class = $(this).attr('new-class');
             var old_class = $('#display-buttons').attr('data-class');
