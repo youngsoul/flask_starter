@@ -13,7 +13,7 @@ def load_user(id):
     :param id: username
     :return: return User object or None
     """
-    current_app.logger.info(f'load_user: {id}')
+    #current_app.logger.info(f'load_user: {id}')
 
     users = Config.load_users()
     for user in users:
